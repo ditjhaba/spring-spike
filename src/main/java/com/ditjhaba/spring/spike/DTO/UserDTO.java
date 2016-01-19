@@ -19,10 +19,17 @@ public class UserDTO {
     @NotNull
     private Role role = Role.USER;
 
+    public UserDTO() {
+    }
+
     public UserDTO(String email, String password, String passwordRepeated) {
         this.email = email;
         this.password = password;
         this.passwordRepeated = passwordRepeated;
+    }
+
+    public UserDTO(String email) {
+        this.email = email;
     }
 
     public String getEmail() {
